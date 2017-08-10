@@ -1,0 +1,12 @@
+<button (click)="setGotData()">test</button>
+<div *ngFor="let aRegion of regionList"
+     (click)="aRegion.isActive=!aRegion.isActive"
+     [class.active-selection]="aRegion.isActive"
+     class="a-region-selection">
+  <region-item
+    *ngIf="gotData"
+    [aRegion]="aRegion"></region-item>
+  <region-detail
+    *ngIf="aRegion.isActive"
+    [aRegion]="aRegion"></region-detail>
+</div>

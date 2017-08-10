@@ -1,0 +1,30 @@
+<section class="detail-card">
+  <div class="weather-card"
+  [ngClass]="getWeatherCardClass(aRegion.singleDayWeather)">
+    <div [ngClass]="getWeatherClass(aRegion.singleDayWeather)"></div>
+  </div>
+  <div class="region-status">
+    <p class="temperature">{{aRegion.singleDayWeather.now.temperature}} &#8451;</p>
+    <p class="weather-status">{{aRegion.singleDayWeather.now.text}}</p>
+  </div>
+  <div class="future-weather-list-wrapper">
+    <section class="future-weather-block">
+      <h4 class="future-date">今天 11日</h4>
+      <p class="future-weather-detail">
+        {{aRegion.threeDaysWeather.daily[0].text_day}}
+      </p>
+    </section>
+    <section class="future-weather-block">
+      <h4 class="future-date">明天 12日</h4>
+      <p class="future-weather-detail">
+        {{aRegion.threeDaysWeather.daily[1].text_day}}
+      </p>
+    </section>
+    <section class="future-weather-block">
+      <h4 class="future-date">后天 13日</h4>
+      <p class="future-weather-detail">
+        {{aRegion.threeDaysWeather.daily[2].text_day}}
+      </p>
+    </section>
+  </div>
+</section>

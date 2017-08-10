@@ -1,0 +1,20 @@
+.a-region-selection
+  /deep/ .detail-card
+    display: none
+    opacity: 0
+  &.active-selection
+    margin-bottom 10px
+    /deep/ .region-item
+      background-color #3c3b3d
+      color: #fff;
+      box-shadow none
+      border-radius 8px 8px 0 0
+      margin-bottom 0
+      .item-weather-preview
+        display: none
+      .caret
+        transform: rotate(90deg) translate(-135%);
+    /deep/ .detail-card
+      display block
+      opacity: 1
+      border-radius 0 0 8px 8px

@@ -1,0 +1,26 @@
+.region-item
+  cursor: pointer;
+  position: relative
+  box-sizing border-box
+  width:100%;
+  font-size: 24px;
+  line-height:1.5;
+  background-color #fafafa
+  padding 10px
+  //border-radius 8px
+  box-shadow 2px 8px 14px rgba(135,135,135,0.8)
+  margin-bottom 10px
+  .region-name
+    display: inline-block
+  .item-weather-preview
+    display: inline-block
+    font-weight:lighter;
+  .caret
+    color #ddd
+    position: absolute
+    top: 50%
+    right 20px
+    transition: transform .2s linear
+    transform translateY(-50%)
+    &.caret-down
+      transform: rotate(90deg) translate(-95%);
