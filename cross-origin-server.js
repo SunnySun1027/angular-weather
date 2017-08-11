@@ -1,6 +1,6 @@
 var express = require('express');
 var request = require('request');
-var app = express(), port = 3000, apiRouter = express.Router();
+var app = express(), port = 3001, apiRouter = express.Router();
 
 apiRouter.use('/get-three-days',function (req, res) {
   console.log('Three days req.query.region = \n', req.query.region);

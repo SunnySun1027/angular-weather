@@ -1,40 +1,6 @@
 import {Component} from '@angular/core';
 import {Http, Headers} from '@angular/http'
 
-interface singleDayWeather {
-  now: {
-    text: string,
-    code: number,
-    temperature: string
-  };
-}
-interface threeDaysWeather {
-  daily: [
-    {date: string,text_day: string},
-    {date: string,text_day: string},
-    {date: string,text_day: string}
-  ];
-}
-interface aRegionInterface {
-  regionName: string,
-  regionEnName: string,
-  singleDayWeather: {
-    now: {
-      text: string,
-      code: number,
-      temperature: string
-    }
-  },
-  threeDaysWeather: {
-    daily: [
-      {date: string,text_day: string},
-      {date: string,text_day: string},
-      {date: string,text_day: string}
-    ]
-  },
-  isActive: boolean
-}
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -121,25 +87,12 @@ export class AppComponent {
       isActive: false
     }
   ];
-  temp: aRegionInterface = {
-      regionName: '洛阳',
-      regionEnName: 'luoyang',
-      singleDayWeather: {
-        now: {
-          text: '',
-          code: 0,
-          temperature: ''
-        }
-      },
-      threeDaysWeather: {
-        daily: [
-          {date: '',text_day: ''},
-          {date: '',text_day: ''},
-          {date: '',text_day: ''}
-        ]},
-      isActive: false
-  };
-
+  /*这里有一个bug：
+  * 在aot模式下build时，会因为数据尚未传输进来而报错：
+  * "... is undefined."
+  * 可以参考：https://stackoverflow.com/questions/40097820/property-does-not-exist-on-type-object-observable-subscribe
+  * 所以最后只好使用ng buil --prod --no-aot。
+  * TODO 优化之*/
   targetRegionList = [
     {
       regionName: '洛阳',
@@ -231,8 +184,10 @@ export class AppComponent {
   }
 
   getApiData(): void {
+    // TODO Observable.zip
     for (let i = 0; i < this.targetRegionList.length; i++) {
       let targetCity = this.targetRegionList[i].regionEnName;
+      // TODO 根据环境配置，不要写死地址。
       this.http.get(`http://juniortour.net:4201/api/get-single-day/?region=${targetCity}`)
         .subscribe(res => {
           // console.log('get single day : ');

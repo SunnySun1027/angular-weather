@@ -12,6 +12,7 @@ export class RegionDetail {
 
   getWeatherCardClass(targetWeather): string {
     // console.log(targetWeather);
+    // TODO 此处还需要优化！
     let outcomeClass = 'weather-card-';
 
     if (targetWeather.now.code <= 4) {

@@ -4,13 +4,13 @@
 
 天气数据的接口用了"**肥肠不友好的**"**免费版**[心知天气API](https://www.seniverse.com/doc)。
 
-另外还搭建了一个简单的后端服务器来解决请求数据时的前端跨域问题，即`./cross-origin-server.js`。
+另外还搭建了一个简单的node后端服务器来解决请求数据时的前端跨域问题，即`./cross-origin-server.js`。
 
 天气动画特效借鉴自：https://codepen.io/EvanWieland/pen/PwOKLE 。
 
-## 在线预览地址：http://juniortour.net:4201/
+## 在线预览：http://juniortour.net:4201/
 
-[Angular-Weather](http://juniortour.net:4201/)
+点击访问预览：[Angular-Weather](http://juniortour.net:4201/)
 
 
 手机扫一扫预览：
@@ -34,7 +34,9 @@ cd angular-weather
 
 cnpm i
 
-ng s  // 开发环境下以 angular-cli 启动
+npm run CSOR-API // 开发环境下启动跨域服务器后，可以通过localhost:3001获取转发的数据。
+
+ng s  // 开发环境下以 angular-cli 在 localhost:4201 启动
 
 npm run build-prod  // 生产环境打包
 

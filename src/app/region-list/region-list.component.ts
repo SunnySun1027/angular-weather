@@ -8,10 +8,5 @@ import { Component, Input } from '@angular/core'
 
 export class RegionList {
   title = '地区列表';
-  isActive = false;
-  gotData = false;
   @Input() regionList = [];
-
-  // ngOnInit() {
-  // }
 }
