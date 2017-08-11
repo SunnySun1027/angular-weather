@@ -1,4 +1,7 @@
-# AngularWeatherApp
+# Angular-Weather
+
+这是一个用`angular@4.3`制作的天气类web app。
+天气数据的接口用了"肥肠不友好的"**免费版**[心知天气](https://www.seniverse.com/doc)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.2.7.
 

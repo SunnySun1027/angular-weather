@@ -233,7 +233,7 @@ export class AppComponent {
   getApiData(): void {
     for (let i = 0; i < this.targetRegionList.length; i++) {
       let targetCity = this.targetRegionList[i].regionEnName;
-      this.http.get(`http://localhost:3000/api/get-single-day/?region=${targetCity}`)
+      this.http.get(`http://localhost:4201/api/get-single-day/?region=${targetCity}`)
         .subscribe(res => {
           // console.log('get single day : ');
           // console.log(res.json());
@@ -245,7 +245,7 @@ export class AppComponent {
           // alert('网络错误！请联系管理员：https://github.com/JuniorTour。')
         });
 
-      this.http.get(`http://localhost:3000/api/get-three-days/?region=${targetCity}`)
+      this.http.get(`http://localhost:4201/api/get-three-days/?region=${targetCity}`)
         .subscribe(res => {
           // console.log('get three days : ');
           // console.log(res.json());
