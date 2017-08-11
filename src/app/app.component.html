@@ -3,7 +3,8 @@
     <header>
       <nav>Angular Weather</nav>
     </header>
-    <section class="main-body">
+    <button *ngIf="!enteredApp" (click)="enterApp()" class="enter-app-btn">进入应用</button>
+    <section *ngIf="enteredApp" class="main-body">
       <region-list [regionList]="targetRegionList"></region-list>
     </section>
   </div>

@@ -12,13 +12,6 @@ export class RegionList {
   gotData = false;
   @Input() regionList = [];
 
-  ngOnInit() {
-    if (this.regionList[6].singleDayWeather.now.text) {
-      this.setGotData()
-    }
-  }
-
-  setGotData() {
-    this.gotData = true;
-  }
+  // ngOnInit() {
+  // }
 }
