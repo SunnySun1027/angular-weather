@@ -8,6 +8,16 @@
 
 天气动画特效借鉴自：https://codepen.io/EvanWieland/pen/PwOKLE 。
 
+## 在线预览地址：http://juniortour.net:4201/
+
+[Angular-Weather](http://juniortour.net:4201/)
+
+
+手机扫一扫预览：
+
+![angular-weather-qr-code.png](./angular-weather-qr-code.png)
+
+
 ## 图片预览
 ![angular-weather](./angular-weather.png)
 
@@ -26,9 +36,9 @@ cnpm i
 
 ng s  // 开发环境下以 angular-cli 启动
 
-npm run build-prod
+npm run build-prod  // 生产环境打包
 
-npm run prod  // 生产环境下在 localhost:4201 启动
+npm run prod  // 生产环境下编译打包后在 localhost:4201 启动
 
 ```
 
