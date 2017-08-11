@@ -1,6 +1,6 @@
 var express = require('express');
 var request = require('request');
-var app = express(), port = 3000, apiRouter = express.Router();
+var app = express(), port = 4201, apiRouter = express.Router();
 
 app.use(express.static(__dirname + '/dist')); //3000端口的静态文件，即index.html
 
