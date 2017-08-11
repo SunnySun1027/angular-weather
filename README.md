@@ -1,31 +1,35 @@
 # Angular-Weather
 
 这是一个用`angular@4.3`制作的天气类web app。
-天气数据的接口用了"肥肠不友好的"**免费版**[心知天气](https://www.seniverse.com/doc)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.2.7.
+天气数据的接口用了"**肥肠不友好的**"**免费版**[心知天气API](https://www.seniverse.com/doc)。
 
-## Development server
+另外还搭建了一个简单的后端服务器来解决请求数据时的前端跨域问题，即`./cross-origin-server.js`。
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+天气动画特效借鉴自：https://codepen.io/EvanWieland/pen/PwOKLE 。
 
-## Code scaffolding
+## 图片预览
+![angular-weather](./angular-weather.png)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## To-do
+0. 环境配置
+1. 考虑使用`Observable.zip`
+2. ......
 
-## Build
+## 本地启动方法：
+```
+git clone https://github.com/JuniorTour/angular-weather.git
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+cd angular-weather
 
-## Running unit tests
+cnpm i
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+ng s  // 开发环境下以 angular-cli 启动
 
-## Running end-to-end tests
+npm run build-prod
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
+npm run prod  // 生产环境下在 localhost:4201 启动
 
-## Further help
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+### 欢迎各种交流～～～
